@@ -18,5 +18,13 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  
+  first_array_i = 0 
+  while first_array_i < nds.count do 
+    name_i = 0 
+    #go into movies: worldwide_gross:
+    while name_i < nds.[first_array_i].count do 
+      
+    end
+    #name of director / movies 
+  end
 end

@@ -18,13 +18,19 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  first_array_i = 0 
-  while first_array_i < nds.count do 
-    name_i = 0 
+  producer_i = 0 
+  while producer_i < nds.count do 
+  movies_i = 0 
+  producer_count = 0 
+  producer_name = nds[producer_i][:name]
     #go into movies: worldwide_gross:
-    while name_i < nds.[first_array_i].count do 
-      
+    while movies_i < nds[producer_i][:movies].count do 
+    producer_count += nds[producer_i][:movies][movies_i][:worldwide_gross] 
+    #name of director / movies
+    movies_i += 1 
     end
-    #name of director / movies 
+  producer_i += 1
+  result[producer_name] = producer_count
   end
+   result
 end
